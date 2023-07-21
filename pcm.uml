@@ -1,0 +1,18 @@
+@startuml
+
+skinparam actorStyle awesome
+
+actor 生产者 as producer
+actor 消费者 as consumer
+queue 数据队列 as queue
+
+skinparam sequence {
+  LifeLineBorderColor DeepSkyBlue
+  LifeLineBackgroundColor SkyBlue
+  ArrowColor Olive
+}
+
+producer -> queue : 发送数据
+queue -> consumer : 接收数据
+
+@enduml
